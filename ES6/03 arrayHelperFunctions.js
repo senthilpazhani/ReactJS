@@ -28,10 +28,15 @@ items.forEach(function(item){
 });
 console.table(copy);
 divider(); 
+
 //Using thisArg
+//create objects using the Constructor function
 function Counter() {
     this.sum = 0;
     this.count = 0;
+    this.myFun = function(){
+        return this.sum + ' ' + this.count;
+    }
 }
 Counter.prototype.add = function(array) {
     array.forEach(function(entry) { this.sum += entry; ++this.count; }, this);
@@ -43,6 +48,7 @@ const obj = new Counter();
 obj.add([2, 5, 9]);
 console.log(obj.count); // 3 
 console.log(obj.sum); // 16
+console.log(obj.myFun()); // 3 
 
 divider(); 
 
@@ -51,6 +57,21 @@ words.forEach(function(word) {
   console.log(word);  
   if (word === 'two') { words.shift();  }
 });
+
+divider();
+
+let myObject = {
+    name : ['a','b','c','d'],
+    balance : '10000',
+    currBalance : function(){
+        this.name.forEach((x)=>console.log(`${x} balance is ${this.balance}`));
+    },
+    currBalanceConcise : ()=>{
+        myObject.name.forEach((x)=>console.log(`${x} balance is ${myObject.balance}`));
+    },
+}
+myObject.currBalance();
+myObject.currBalanceConcise();
 divider('*'); 
 
 //map
