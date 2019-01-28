@@ -127,3 +127,28 @@ console.log(name);//"Sarah"
 console.log(friends);//["Annie", "Becky"]
 console.log(others);// {country: "Nigeria", job: "Developer"}
 
+
+//argument of a function
+recipes = [{name:'burger',calorie:215},{name:'pizza',calorie:266}];
+recipes.forEach(function({name:name, calorie:calorie}){console.log(name,calorie);});
+
+function printDeFun([name,color]){
+  console.log ('Name : ' + name + ' Color : ' + color)
+}
+let res=['mark','color']
+printDeFun(res)
+
+// with rest
+var prop1 = "name"
+var prop2 = "salary"
+let employees = [
+    {name:'PSK',salary:80000, dept:'PreSales', age:'20'},
+    {name:'senthil',salary:60000, dept:'Mkt', age:'24'},
+    {name:'Psenthil',salary:40001, dept:'Acc', age:'30'},
+]
+employees.forEach(function(a){
+    var {[prop1]:fname,[prop2]:modsalary,...resp} = a;
+    console.log(fname);
+    console.log(modsalary);
+    console.log(resp);
+})

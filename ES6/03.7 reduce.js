@@ -172,5 +172,3 @@ function runPromiseInSequence(arr, input) {
   runPromiseInSequence(promiseArr, 10)
     .then(console.log);   // 1200
   
-
-

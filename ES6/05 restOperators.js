@@ -27,3 +27,12 @@ function sumAll(...args)
 console.log( sumAll(1) );
 console.log( sumAll(1, 2) );
 console.log( sumAll(1, 2, 3) );
+
+
+arr = [1,2,3]
+for (var x in arr){
+console.log(x)} // 0, 1, 2  // returning index
+
+arr = [1,2,3]
+for (var x of arr){
+console.log(x)} //1, 2, 3 

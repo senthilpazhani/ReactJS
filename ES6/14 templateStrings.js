@@ -24,3 +24,19 @@ fn = (strings=[], ...values) => {
 }
 console.log(fn`Hello ${you}! You're looking ${adjective} today!`); // Hello MARK! You're looking FRESH today! 	
 console.log(fn(["Hello ", "! You're looking ", " today!"], you, adjective)); // Hello MARK! You're looking FRESH today!
+
+
+let hr=()=>{ return '--------------------------------'};
+console.log(`Blank Function ${()=>hr()}`); //will return Blank Function ()=>hr()
+//Fix
+myTag = (str=[],func) => {  return str[0]+func()};  // string and remaining inputs
+var newString = myTag `End ${()=>hr()} Here`;
+console.log(newString);
+
+myTag = (str=[],...func) => { 
+    let result = str[0];
+    func.forEach((fn, index) => result += fn() + str[index + 1]);
+    return result;  // string and remaining inputs
+}
+var newString = myTag `End ${()=>hr()} Here  ${()=>hr()} Here  ${()=>hr()} Here`;
+console.log(newString);

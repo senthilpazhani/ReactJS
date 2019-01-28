@@ -42,3 +42,123 @@ console.log('count =', Shoe.count); // 3
 console.log('s2 = ' + s2); // Nike Free 5 in size 12
 console.log('s1.equals(s2) =', s1.equals(s2)); // false
 console.log('s3.equals(s3) =', s3.equals(s3)); // true 
+
+
+console.log('===================================');
+
+var pet = {
+    name:['a','b','c'],
+    owner:['psk'],
+    description:function(){
+        return this.name.map( (pet)=>{
+            return `${this.owner} ${pet}`
+        })
+        //ES5        
+        //return this.name.map(function(pet){ return `${this.owner} ES5 ${pet}` }.bind(this))        
+        //return this.name.map(function(pet){ return `${this.owner} ES5 ${pet}` }.pet                
+        //var self = this
+        //return this.name.map(function(pet){ return `${self.owner} ES5 ${pet}` })       
+    },
+    individual_pet_object:()=>{
+        return pet.name.map( (pet)=>({name:pet,owner:pet}))       
+    },
+    individual_pet_object_withfunction:function(){
+        return this.name.map( (pet)=>({name:pet,owner:`${this.owner}`}))       
+    }    
+}
+
+var arr =pet.description()
+for(var x of arr){
+    console.log(x)
+}
+var arr =pet.individual_pet_object()
+for(var x of arr){
+    console.log(x)
+}
+var arr =pet.individual_pet_object_withfunction()
+for(var x of arr){
+    console.log(x)
+}
+
+var empObj={name:'PSK',
+    id:12,
+    getName:()=>{return this.name}
+}
+console.log('Print Name : ',empObj.getName());
+
+console.log('===================================');
+
+
+class Account{
+    constructor(account, openingBalance){
+        this.account=account;
+        this.balance=openingBalance;
+    }
+    deposit(amt){
+        this.balance += amt;
+    }
+    getBalance(){
+        return 'Balance: ' + this.balance;
+    }
+    get account(){
+        return this._account;
+    }
+    set account(account){
+        this._account = account;
+    }
+    toString(){
+        return 'Account: ' + this.account + ' and Balance: ' + this.balance;
+    }
+}
+
+var pskAcc = new Account('6098123',1000);
+console.log(pskAcc.getBalance());
+pskAcc.deposit(100000);
+console.log(pskAcc.getBalance());
+console.log(pskAcc.toString());
+pskAcc.account = '1111111';
+console.log(pskAcc.account);
+pskAcc.balance = 506000;
+console.log(pskAcc.balance);
+
+console.log('===================================');
+
+class SavingsAccount extends Account{
+    constructor(account, openingBalance, interest){
+        super(account, openingBalance);
+        this.account=account;
+        this.balance=openingBalance;
+        this.interest = interest;        
+    }
+    toString(){
+        return super.toString() + " Interest is " + this.interest;
+    }
+}
+
+class CurrentAccount extends Account{
+    constructor(account, openingBalance, overlimit){
+        super(account, openingBalance);
+        this.account=account;
+        this.balance=openingBalance;
+        this.overlimit = overlimit;        
+    }
+    toString(){
+        return super.toString() + " Overlimit is " + this.overlimit;
+    }
+}
+var pskSavingAcc = new SavingsAccount('6098123',1000,'10.99%');
+var pskCurrAcc = new CurrentAccount('6098123',1000,150000);
+
+console.log(pskSavingAcc.toString());
+console.log(pskCurrAcc.toString());
+
+function getLaptop(make,model,year){
+    return{
+        make,
+        model,
+        year,
+        sayModel()
+        {return model;}
+    }
+}
+console.log(getLaptop('Yamaha','Z500','2017').sayModel());

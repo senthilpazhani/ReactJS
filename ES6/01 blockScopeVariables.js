@@ -50,6 +50,17 @@ let x4 = 40;
 console.log(x4);
 divider();
 
+
+let scope=10 
+{let scope =100
+    {let scope =1000
+        {let scope=50000
+        console.log('inner most',scope) }
+    console.log('inner',scope) }
+console.log('outer',scope)}
+console.log('outer most',scope)
+divider();
+
 //Block Function
 outerFn=()=>console.log(`I'm in Outer Func`);
 {
@@ -59,18 +70,45 @@ outerFn=()=>console.log(`I'm in Outer Func`);
 }
 outerFn();
 innerFn();
-divider();
-
-function outer(){
-    console.log(`I'm in Outer Func`);}
-{
-    function inner(){
-        console.log(`I'm in Inner Func`);}
-    outer();
-    inner();
-}
-outer();
-inner();
 divider(); 
 
+var a=[1,2,3,4,5]
+for(var i=0, n=5; i<n;i++){
+    var nomnom = a[i];
+    setTimeout(function(){
+    //    console.log('Set Time : ',nomnom); //error
+    },500*(i) ) //step by step printing
+} 
+ 
+for(var i=0, n=5; i<n;i++){
+    var nomnom = a[i];
+    setTimeout(function(){
+        console.log("var", nomnom, ' ' , i); //error
+    },500 )
+} 
+  
+for(var i=0, n=5; i<n;i++){
+    let nomnom = a[i];
+    var varnomnom = a[i];
+    setTimeout(function(){
+        //console.log("var", varnomnom , ' ' , i); //error
+        console.log("let",nomnom , ' ' , i); //error
+    },500)
+}
+
+var t0 = performance.now(); 
+for(var i=0, n=10; i<n;i++){ 
+        console.log("var",   i);  
+} 
+  
+var t1 = performance.now();
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+
+var t2 = performance.now(); 
+for(let i=0, n=10; i<n;i++){ 
+        console.log("let",   i);  
+}   
+var t3 = performance.now();
+console.log("Call to doSomething took " + (t3 - t2) + " milliseconds.")
+ 
 
