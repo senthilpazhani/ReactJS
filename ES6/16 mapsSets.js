@@ -52,8 +52,8 @@ for (const item of map.entries())
 map.forEach((k,v)=>console.log(`key: ${k}, value:${v}`))
 map.forEach((k) => {console.log(k);});
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//Map : let newMap = new Map([...map].map(  ([key, value]) => [new-key-expr, new-value-expr]));
-//Filter : let newMap = new Map([...map].filter(  ([key, value]) => boolean-expr]));
+// Map : let newMap = new Map([...map].map(  ([key, value]) => [new-key-expr, new-value-expr]));
+// Filter : let newMap = new Map([...map].filter(  ([key, value]) => boolean-expr]));
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 /*Set
