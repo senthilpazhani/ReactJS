@@ -34,4 +34,81 @@ function sum(acc, value){
 console.log(report(1,2,3)) 
 console.log(report(1,2,3,4,5)) 
 console.log(report(1,2,3,4)) 
+
+
+var f = function(one, two, three){console.log('Printing ',one,two,three)}
+var a = [1, 2, 3];
+f.apply(null,a);
+
+var f = function(one, two, three){ console.log(one + two + three);}
+var a = [1,2,3];
+f(...a);
+
+//New way of syntax
+var f= function(a,b,c,d,e,f){};
+var a = [1,2];
+f(-1,...a,3,...[-3, -4]);
+
      
+var from = [1,2];
+//wants: [0,1,2,3] ie [0, from, 3]
+//With es5
+var a = [0,3]
+a.unshift(0);
+a.push(3);
+// and splice is here also
+//With es6
+var total = [0, ...from,3];
+console.log(total)
+//Array like
+//> Object with a length property
+//> Can access elements with[]
+var fake = {
+ 0 : 'I\'m',
+ 1: 'not',
+ 2: 'an array',
+ length: 3
+};
+//Result
+console.log(fake)  //{0: "I'm", 1: "not", 2: "an array", length: 3}
+
+
+//Array like in the wild
+//> function’s arguments
+//> all nodeList from the DOM
+
+//Before:
+var nodes = document.querySelectorAll('.md'); 
+var nodes = [].slice.call(nodes);
+console.log(nodes)
+//And now:
+nodes = [...nodes];
+console.log(nodes)
+
+//Array Conversion
+console.log(Array.from(document.querySelectorAll('div')));
+
+//Apply
+/*Function.prototype.apply
+fun.apply(thisArg, [argsArray])
+*/
+function f(){
+  for(let i=0;i<arguments.length;++i)
+    console.log(arguments[i]);
+}
+f.apply(this,['one',2,'foo']);
+
+//Push Multiple Elements:
+var a = [];
+var toPush = [1,2,3];
+a.push.apply(a, toPush);
+//And now
+a.push(...toPush);
+
+
+
+//Array comprehensions
+var  a = [ {color:'red'}, {color:'blue'} ];
+//[x.color for(var x of a) {if ('blue' === x.color) console.log(x.color)}]
+// [ 'blue' ]
+

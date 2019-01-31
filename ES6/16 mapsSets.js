@@ -4,8 +4,8 @@
 //Key should be unique
 
 //Creating Map
-let map = new Map();
-let val2 = 'val2', val3 = {key: 'value'};
+var map = new Map();
+var val2 = 'val2', val3 = {key: 'value'};
 
 //To add or modify a pair,
 map.set(0, 'val1');
@@ -62,8 +62,8 @@ Set hold collections of unique values
 Values can be any type including primitives or object references
 */
 //Creating Set, 
-let set = new Set() 
-let name = 'ES6';
+var set = new Set() 
+var name = 'ES6';
 
 //To add a value,
 set.add(1);
@@ -76,8 +76,8 @@ console.log(set); // Set(4) {1, "1", "ES6", {…}}
 set.forEach((v)=>console.log(`Value is: ${v}`))
 
 
-let set = new Set()
-let name ="PSK"
+var set = new Set()
+var name ="PSK"
 
 set.add(1);
 set.add("1").add("2").add("3").add("3").add("4");
@@ -193,8 +193,8 @@ console.log("Tagged template String : ", newString);
 
 //=====================================
 
-let map = new Map();
-let val2 = 'val1', val3 = {key:'value'};
+var map = new Map();
+var val2 = 'val1', val3 = {key:'value'};
 
 map.set(0,'val1');
 map.set("1",val2);
@@ -358,3 +358,37 @@ var genfun3 = genfun3();
 genfun3.next();
 console.log(genfun3.next('blue').value);
  
+
+//Modifying a Map
+var map = new Map([ ['name','John'],[23,'age'] ]);
+console.log(map.size); //2
+console.log(map); 
+map.delete(23);
+console.log(map.get(23)); //undefined
+console.log(map); 
+map.clear();
+console.log(map.size); //0
+
+
+
+// Iterating over Map
+var map = new Map([ ['name','John'],[23,'age'] ]);
+for (var value  of map.values()) {}
+for (var value  of map.keys()) {}
+for (var item of map.items()) {
+console.log('Key:' + item[0]+', value:'+item[1]);
+}
+for (var item of map) { //same as iterating map.items()
+map.forEach(function(value, key, map){})};
+
+
+
+
+var weakMap = new WeakMap();
+var key = { 
+	Stuff:true
+};
+
+weakMap.set(key, 123); //weakMap contains 1 item
+
+delete key; //weakMap is now empty

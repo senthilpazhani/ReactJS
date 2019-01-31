@@ -109,3 +109,22 @@ console.log( myObject.map(x => x.name) )
 console.log( myObject.map(x => x.dept) )
 
 });
+
+//.map()
+getProductPositions = function(productIds){
+	var positions = [];
+    if(prodcat && prodcat.data.pids){
+        for (var i=0;i<productIds.length;i++){
+            positions.push(this.findElementIndex(prodcat.data.pids, productIds[i]));
+        }
+    }
+    return positions;
+}
+//Better approach
+getProductPositions_enhanced = function(productIds){
+	var positions = [];
+    positions = productIds.map(function(elem) {
+        return this.findElementIndex(prodcat.data.pids, elem);
+    });
+    return positions;
+}
