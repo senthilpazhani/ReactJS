@@ -1,0 +1,36 @@
+<script src="https://fb.me/react-0.14.7.js"></script>
+<script src="https://fb.me/react-dom-0.14.7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+<body>
+    <div id="app"></div>
+    <div id="app1"></div>
+    <div id="app2"></div>
+    <div id="app3"></div>
+</body>
+<style>
+    .colorName{
+    color:red;}
+</style>
+<script type="text/babel">
+//using Create Element
+    const header = React.createElement("h1",{
+        name:'bar',
+        id:'li1',
+        foo:'2Ad', 
+        //note use of JS class property representing class attribute below
+        //i.e., className
+        className:'colorName',
+        'data-test':'test',
+        'aria-test':'test',
+        //note use of JS camel-cased CSS property below
+        //i.e., backgroundColor
+        style:{backgroundColor:'#f3f3f3'}
+    },"Hi you");
+    ReactDOM.render(header,document.getElementById("app"));
+
+    ReactDOM.render(React.createElement("h1",{ },"Hi"),document.getElementById("app1"));
+       
+    ReactDOM.render(<bigger>I'm psk</bigger>,document.getElementById("app2"));
+    const a =10, b=20;
+    ReactDOM.render(<p>Adding {a} and {20} = {10+20}</p>,document.getElementById("app3"));
+</script>
