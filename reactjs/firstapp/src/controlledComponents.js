@@ -31,9 +31,9 @@ class App extends React.Component { // Child Component
 
   handlerOnChange(event){
     const target = event.target;
-    const value = target.value.toUpperCase();
-    const checked = target.type==='checkbox' ? target.checked : '';
-    const name = target.name; 
+   // const value = target.value.toUpperCase();
+   // const checked = target.type==='checkbox' ? target.checked : '';
+  //  const name = target.name; 
     // this.setState({
     //     [name]:value
     // });
