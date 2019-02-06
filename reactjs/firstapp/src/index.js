@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import StatelessApp from './StatelessApp';
-import StatefullApp from './StatefullApp';
+// import App from './App';
+// import StatelessApp from './StatelessApp';
+// import StatefullApp from './StatefullApp';
 import EmployeeProfile from './EmployeeProfile';
 import * as serviceWorker from './serviceWorker';
 
