@@ -4,11 +4,12 @@ import './index.css';
 // import App from './App';
 // import StatelessApp from './StatelessApp';
 // import StatefullApp from './StatefullApp';
-import EmployeeProfile from './EmployeeProfile';
+//import EmployeeProfile from './EmployeeProfile';
+import ControlledComponents from './controlledComponents';
 import * as serviceWorker from './serviceWorker';
 
 //ReactDOM.render(<App myName="Senthil" />, document.getElementById('root'));
-ReactDOM.render(<EmployeeProfile myName="Senthil" />, document.getElementById('root'));
+ReactDOM.render(<ControlledComponents myName="Senthil" />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
