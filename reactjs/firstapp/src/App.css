@@ -50,6 +50,14 @@ button{padding:5px 20px;}
   color: #61dafb;
 }
 
+.todolist ul{
+  padding:0px;margin:0px auto;width:500px;
+}
+.todolist li{
+  list-style: disc;padding:3px;margin:10px;text-align:left;background-color: #efefef;
+  list-style-position: inside;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
