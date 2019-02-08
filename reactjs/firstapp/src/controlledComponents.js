@@ -13,8 +13,10 @@ lastname:'',
 address:'',
 checkindate:'',
 checkoutdate:'',
+adult:'',
+children:'',
 noofperson:0,
-foodservice:true,
+foodservice:'0',
 country:''}
 
 class App extends React.Component { // Child Component   
@@ -30,8 +32,8 @@ class App extends React.Component { // Child Component
 
   handlerOnChange(event){
     const target = event.target;
-    const value = target.type==='checkbox' ? target.checked : target.value.toUpperCase();
-    const name = target.name; 
+    const value = target.type==='checkbox' ? target.checked : target.value; 
+    const name = target.name;  
     this.setState({
         [name]:value
     }); 
@@ -45,7 +47,8 @@ class App extends React.Component { // Child Component
     Address : ${this.state.address}
     Your booking Dates between ${this.state.checkindate} and ${this.state.checkoutdate}
     No of persons : ${this.state.noofperson}
-    Food service : ${this.state.foodservice}
+    Adult : ${this.state.adult} and Children : ${this.state.children}
+    Food service : ${ (this.state.foodservice==='0') ? 'Required':'Not Required' }
     Country : ${this.state.country}`;
     console.log(alertMsg);
     
@@ -78,12 +81,20 @@ class App extends React.Component { // Child Component
           <div><label htmlFor="checkoutdate">Check out Date : </label>
           <input type="date" name="checkoutdate" id="checkoutdate" value={this.state.checkoutdate} length="20" tabIndex="0"
           onChange={this.handlerOnChange} /></div>
+          <div><label htmlFor="checkoutdate">Adult : </label>
+          <input type="checkbox" name="adult" id="adult" value={this.state.adult} length="20" tabIndex="0"
+          onChange={this.handlerOnChange} /></div>
+          <div><label htmlFor="checkoutdate">Children : </label>
+          <input type="checkbox" name="children" id="children" value={this.state.children} length="20" tabIndex="0"
+          onChange={this.handlerOnChange} /></div>
           <div><label htmlFor="noofperson"># of Persons : </label>
           <input type="number" name="noofperson" id="noofperson" value={this.state.noofperson} length="20" tabIndex="0"
           onChange={this.handlerOnChange} /></div>
           <div><label htmlFor="foodservice">Food Servide : </label>
-          <input type="checkbox" checked={this.state.foodservice} name="foodservice" id="foodservice" value="seafood" length="20" tabIndex="0"
-          onChange={this.handlerOnChange} /></div>
+          <input type="radio" checked={this.state.foodservice==='0'} name="foodservice" id="foodservice1" value="0" length="20" tabIndex="0"
+          onChange={this.handlerOnChange} />Required
+          <input type="radio" checked={this.state.foodservice==='1'} name="foodservice" id="foodservice2" value="1" length="20" tabIndex="0"
+          onChange={this.handlerOnChange} />Not Required</div>
           <div><label htmlFor="country">Country : </label>
           <select type="text" name="country" id="country" value={this.state.country} length="20" tabIndex="0"
           onChange={this.handlerOnChange} >

@@ -25,7 +25,7 @@ class App extends React.Component { // Child Component
     const value = document.getElementById('task').value;
     this.setState({
       todos:[...this.state.todos,value],
-      title: 'hi'
+      title: 'My To Do List'
     });  
   }
 

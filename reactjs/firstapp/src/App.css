@@ -37,12 +37,17 @@ label{
   padding: 1px; 
   display: flex;
   float: left;}
-input, textarea, select{
-  min-width: 300px;
+
+input, textarea, select{ 
   text-align: left;
-  padding: 1px; 
+  padding: 1px;  
+}
+
+input[type='text'], input[type='email'], input[type='number'], input[type='date'],input[type='checkbox'],textarea,select{
+  min-width: 300px;
   display: flex;
-  min-height:30px; }
+  min-height:30px;
+}
 
 button{padding:5px 20px;}
 
@@ -53,9 +58,14 @@ button{padding:5px 20px;}
 .todolist ul{
   padding:0px;margin:0px auto;width:500px;
 }
+
 .todolist li{
   list-style: disc;padding:3px;margin:10px;text-align:left;background-color: #efefef;
   list-style-position: inside;
+}
+
+.displayErrors input:invalid {
+  border-color: #f73772;
 }
 
 @keyframes App-logo-spin {
@@ -65,4 +75,15 @@ button{padding:5px 20px;}
   to {
     transform: rotate(360deg);
   }
+}
+
+
+article::before {
+  content: attr(data-parent);
+}
+article[data-columns='3'] {
+  width: 400px;
+}
+article[data-columns='4'] {
+  width: 600px;
 }
