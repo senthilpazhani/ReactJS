@@ -50,29 +50,29 @@
 @media screen and (max-height: 450px) {
     #leftmenubar #leftsidenav {padding-top: 15px;}  }
 @media screen and (max-width: 600px) {    
-    #leftmenubar {width:75px;}  
-    #leftmenubar #leftsidenav a i{font-size:40px;}    
+    #leftmenubar {width:55px;}  
+    #leftmenubar #leftsidenav a i{font-size:25px;}    
     #leftmenubar #leftsidenav a span{display:none;}    
 }
 /* Left Side Slide Bar */
-#leftsideslidebar{width:auto;}
+#leftsideslidebar{width:auto;max-width:350px;}
 #leftsideslidebar{padding:10px;}
 #leftsideslidebar #leftsideovelay .closebtn, #rightsideslidebar #rightsideovelay .closebtn{
     position: absolute; top: 0; right: 25px; margin-left: 50px;font-size: 20px; cursor:pointer; overflow: hidden; }
 #rightsideslidebar_closebtn{float:right;position: relative;}
-#rightsideslidebar{width:250px;right:0;overflow-x: hidden;z-index: 1;width: 0;transition: 0.5s;}
+#rightsideslidebar{width:350px;right:0;overflow-x: hidden;z-index: 1;width: 0;transition: 0.5s;}
 #rightsideslidebar #rightsideovelay{ transition: 0.3s;padding:10px;}
 #leftSidenavIcon #leftsideslidebar_closebtn{position: fixed;left: 140px;padding:10px 8px 10px 22px;top: 50%;}
 #rightSidenavIcon #rightsideslidebar_closebtn{position: fixed;right: -20px;padding:10px 22px 10px 8px;top: 50%;}
 #rightsideslidebar #rightpanelaccordion, #leftsideslidebar #leftsideovelay{padding-top:20px;} 
 @media screen and (max-width: 600px) {     
     #leftsideslidebar, #rightsideslidebar{max-width:100%;}    
-    #leftSidenavIcon #leftsideslidebar_closebtn{left: 55px;}
+    #leftSidenavIcon #leftsideslidebar_closebtn{left: 35px;}
 }
 
 #main { margin-left: 160px;margin-top:46px; padding:0px;transition: margin-right .5s;}
 @media screen and (max-width: 600px) {     
-    #main{ margin-left: 75px;}    
+    #main{ margin-left: 55px;}    
 }
 /* Main Footer Nav bar */ 
 #main ul.breadcrumb { padding: 10px 16px; list-style: none;margin:0px; }
@@ -81,13 +81,15 @@
 #main ul.breadcrumb li a { text-decoration: none;}
 #main ul.breadcrumb li a:hover { text-decoration: underline; }
 #main #content{padding: 1px 10px 10px 10px;margin-bottom:50px;}
-#main #content #profile, #main #content #profile .w3-container{padding:0px;}
+#main #content #profile, #main #content #profile .w3-container {padding:0px;}
+#main #content #profile .w3-container .w3-col:not(.w3-round) {padding:10px;}
 #main #maintab .maintabContainer{padding:20px;}
-
-@media screen and (max-width: 600px) {   
-    #main .w3-bottom .w3-dropdown-hover a{display:block;}
-    #main .w3-bottom a.w3-bar-item span{display:none;}
-    #main .w3-bottom a.w3-bar-item i {font-size:20px;}
+.w3-padding-left-adjust{padding-left:16px;}
+@media screen and (max-width: 600px) { 
+    #main #maintab .maintabContainer{padding:1px;}  
+    #main .w3-bottom .w3-dropdown-hover a{display:block;} 
+    .w3-padding-left-adjust{padding-left:0px;}
+    #main #content #profile .w3-container .w3-col:not(.w3-round) {padding:1px;}    
 }   
 /* Left Nav user tree */
 #leftsideslidebar #leftsideovelay #usertree{padding:10px; margin:0px;}

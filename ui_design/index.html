@@ -32,8 +32,8 @@
                     <a href="#" class="w3-bar-item w3-button 3-hide-small w3-padding-large w3-hover-white" title="Expenses"><i class="fa fa-credit-card w3-large"></i> <span>Expenses</span></a>
                     <a href="#" class="w3-bar-item w3-button 3-hide-small w3-padding-large w3-hover-white" title="Reports"><i class="fa fa-pie-chart w3-large"></i> <span>Reports</span></a>
                     <div class="alert w3-dropdown-hover 3-hide-small">
-                        <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell w3-large"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-                        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                        <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell w3-large"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+                        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:250px">
                             <div class="w3-bar-item w3-padding-small w3-small w3-blue-grey w3-hover-blue-grey">Recent Notifications</div>
                             <a href="#" class="w3-bar-item w3-button w3-padding-small w3-border-bottom w3-small">One new friend request</a>
                             <a href="#" class="w3-bar-item w3-button w3-padding-small w3-border-bottom w3-small">One new friend request</a>
@@ -60,30 +60,22 @@
                 <a href="#services"><i class="fa fa-fw fa-home"></i> <span>Service</span></a>
                 <a href="#clients"><i class="fa fa-fw fa-home"></i> <span>Client</span></a>
                 <a href="#contact"><i class="fa fa-fw fa-home"></i> <span>Contact</span></a>
-                <a class="w3-button w3-block w3-left-align" id="leftsidenav_accordion" onclick="leftsidenav_accordion_func()">
-                Accordion <i class="fa fa-caret-down"></i>
-                </a>
-                <div id="leftsidenav_accordion_content" class="w3-hide w3-white w3-card">
-                    <a href="#" class="w3-bar-item w3-button">Link</a>
-                    <a href="#" class="w3-bar-item w3-button">Link</a>
-                </div>
-                <a class="w3-dropdown-click" id="leftsidenav_dropdown">
-                    <div onclick="leftsidenav_dropdown_func()">
-                    Dropdown <i class="fa fa-caret-down"></i>
-                    </div>
-                    <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
-                    <a href="#" class="w3-bar-item w3-button">Link</a>
-                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                <a class="w3-dropdown-click w3-hover-none" id="leftsidenav_dropdown">
+                    <div onclick="leftsidenav_dropdown_func()"><i class="fa fa-fw fa-home"></i> More Links <i class="fa fa-caret-down"></i></div>
+                    <div id="morelinkdrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+                        <a href="#" class="w3-bar-item w3-button">Link</a>
+                        <a href="#" class="w3-bar-item w3-button">Link</a>
                     </div>
                 </a>
-            
             </nav>
         </aside>
         <aside id="leftsideslidebar" class="w3-sidebar w3-bar-block w3-card-4 w3-black w3-animate-left" style="display:none" >
             <div id="leftsideovelay" >          
                 <div class="closebtn" href="#" onclick="leftsideslidebar_close()">&times;</div>
-                <div class="w3-container w3-theme-d3">Customer List</div>
-                <div class=" w3-theme-d1">                    
+                <div class="w3-button w3-block w3-left-align w3-theme" id="leftsidenav_accordion" onclick="leftsidenav_accordion_func()">
+                     Customer List <i class="fa fa-caret-down"></i>
+                </div>
+                <div id="leftsidenav_accordion_content" class="w3-hide w3-white w3-card">
                     <ul id="usertree">
                         <li><span class="caret">Beverages</span>
                             <ul class="nested">
@@ -106,7 +98,7 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div>                 
                 <div class="w3-panel w3-theme-d1">
                     <p>Filter List</p>
                     <input class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="leftmenufilterinput" onkeyup="leftmenufilter()">
@@ -119,29 +111,28 @@
                         <li>Christina</li>
                         <li>Cindy</li>
                     </ul>
-                </div>
-                
+                </div>                
             </div>
         </aside>             
         <aside id="rightsideslidebar" class="w3-sidebar w3-bar-block w3-card-4 w3-black 3-animate-right" >
             <div id="rightsideovelay" >          
                 <div class="closebtn" href="#" onclick="rightsideslidebar_close()">&times;</div>
                 <section id="rightpanelaccordion">
-                    <button onclick="rightPanelAccordion('Demo1')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 1</button>
-                    <div id="Demo1" class="w3-hide w3-container">
+                    <button onclick="rightPanelAccordion('Demo1')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 1 <i class="fa fa-caret-down"></i></button>
+                    <div id="Demo1" class="w3-hide w3-container w3-white">
                         <p>Some text..</p>
                     </div>
-                    <button onclick="rightPanelAccordion('Demo2')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 2</button>
-                    <div id="Demo2" class="w3-hide w3-container">
+                    <button onclick="rightPanelAccordion('Demo2')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 2 <i class="fa fa-caret-down"></i></button>
+                    <div id="Demo2" class="w3-hide w3-container w3-white">
                         <p>Some other text..</p>
                     </div>
-                    <button onclick="rightPanelAccordion('Demo3')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 1</button>
-                    <div id="Demo3" class="w3-hide w3-container">
+                    <button onclick="rightPanelAccordion('Demo3')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 1 <i class="fa fa-caret-down"></i></button>
+                    <div id="Demo3" class="w3-hide w3-container w3-white">
                         <p>Some text..</p>
                     </div>
 
-                    <button onclick="rightPanelAccordion('Demo4')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 2</button>
-                    <div id="Demo4" class="w3-hide w3-container">
+                    <button onclick="rightPanelAccordion('Demo4')" class="w3-button w3-block w3-blue-grey w3-left-align">Open Section 2 <i class="fa fa-caret-down"></i></button>
+                    <div id="Demo4" class="w3-hide w3-container w3-white">
                         <p>Some other text..</p>
                     </div>
                 </section>
@@ -165,11 +156,11 @@
                 </div>
                 <div class="w3-panel w3-card-2 w3-white" id="profile">
                     <div class="w3-container">
-                        <img class="w3-round w3-margin-right" src="./images/avatar3.png" style="width:100px;float:left">                        
-                        <div class="w3-col l5 w3-padding-small">Customer Name : Senthil Kumar Palanisamy</div>
-                        <div class="w3-col l5 w3-padding-small">Conact Number : 98899 00039 </div>
-                        <div class="w3-col l5 w3-padding-small">Email Address : SenthilKumar@gmail.com</div>
-                        <div class="w3-col l5 w3-padding-small">Contact Person : Senthil Kumar Palanisamy</div>               
+                        <img class="w3-round w3-margin-right w3-col s2" src="./images/avatar3.png" style="min-width:85px;max-width:100px;float:left">                        
+                        <div class="w3-col l5 s8 w3-xsmall"><i class="fa fa-user-o"></i> Senthil Kumar Palanisamy</div>
+                        <div class="w3-col l5 s8 w3-xsmall"><i class="fa fa-phone"></i> 98899 00039 </div>
+                        <div class="w3-col l5 s8 w3-xsmall"><i class="fa fa-envelope-o"></i> SenthilKumar@gmail.com</div>
+                        <div class="w3-col l5 s8 w3-xsmall"><i class="fa fa-users"></i> Senthil Kumar Palanisamy</div>               
                     </div>                    
                 </div>                
                 <div class="w3-hide w3-panel w3-blue-grey">
@@ -187,19 +178,36 @@
                             <h6>Input Form</h6>
                         </div>
                         <form class="w3-container w3-card-4" novalidate> 
-                            <p>      
-                                <label class="w3-text-grey">Name</label>
-                                <input class="w3-input w3-border" type="text" required="">
-                            </p>
-                            <p>      
-                                <label class="w3-text-grey">Email</label>
-                                <input class="w3-input w3-border" type="text" required="">
-                            </p>
-                            <p>      
-                                <label class="w3-text-grey">Subject</label>
-                                <textarea class="w3-input w3-border" style="resize:none"></textarea>
-                            </p>
-                            <br>
+                            <div class="w3-row w3-padding-24">
+                                <div class="w3-half">
+                                    <div class="w3-col">
+                                        <label class="w3-text-grey">Name</label>
+                                        <input class="w3-input w3-border" type="text" required="">
+                                    </div>
+                                    <div class="w3-col">
+                                        <label class="w3-text-grey">Email</label>
+                                        <input class="w3-input w3-border" type="text" required="">
+                                    </div>
+                                    <div class="w3-col">
+                                        <label class="w3-text-grey">Subject</label>
+                                        <textarea class="w3-input w3-border" style="resize:none"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w3-half w3-padding-left-adjust"> 
+                                    <div class="w3-col">
+                                        <label class="w3-text-grey">Name</label>
+                                        <input class="w3-input w3-border" type="text" required="">
+                                    </div>
+                                    <div class="w3-col">
+                                        <label class="w3-text-grey">Email</label>
+                                        <input class="w3-input w3-border" type="text" required="">
+                                    </div>
+                                    <div class="w3-col">
+                                        <label class="w3-text-grey">Subject</label>
+                                        <textarea class="w3-input w3-border" style="resize:none"></textarea>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="w3-row">
                                 <div class="w3-half">
                                     <input id="milk" class="w3-check" type="checkbox" checked="checked">

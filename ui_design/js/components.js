@@ -14,23 +14,23 @@ function leftsidenav_accordion_func() {
   var x = document.getElementById("leftsidenav_accordion_content");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-    x.previousElementSibling.className += " w3-green";
+    x.previousElementSibling.className += " w3-theme";
   } else { 
     x.className = x.className.replace(" w3-show", "");
     x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-green", "");
+    x.previousElementSibling.className.replace(" w3-theme", "");
   }
 }
 
 function leftsidenav_dropdown_func() {
-  var x = document.getElementById("demoDrop");
+  var x = document.getElementById("morelinkdrop");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-    x.previousElementSibling.className += " w3-green";
+    //x.previousElementSibling.className += " w3-green";
   } else { 
     x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-green", "");
+    //x.previousElementSibling.className = 
+    //x.previousElementSibling.className.replace(" w3-green", "");
   }
 }
 
@@ -46,13 +46,13 @@ function leftsideslidebar_close() {
 /* Left Side Slide Bar */
 function rightsideslidebar_open() {
 //    document.getElementById("rightsideslidebar").style.display = "block";
-    document.getElementById("rightsideslidebar").style.width = "250px";
-    document.getElementById("main").style.marginRight = "250px";
+    document.getElementById("rightsideslidebar").style.width = "350px";
+   // document.getElementById("main").style.marginRight = "250px";
 }
 function rightsideslidebar_close() {
     //document.getElementById("rightsideslidebar").style.display = "none";
     document.getElementById("rightsideslidebar").style.width = "0px";    
-    document.getElementById("main").style.marginRight= "0px";
+    //document.getElementById("main").style.marginRight= "0px";
 }
 
 /* Main Footer Bot Bar */
