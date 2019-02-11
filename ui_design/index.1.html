@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="description" content="">
+        <meta name="author" content="">          
+        <title>Dashboard</title>   
+        <!--[if lt IE 9]>
+        <![endif]-->
+
+        <!--[if lt IE 10]>
+        <![endif]-->       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script src="./js/components.js"></script>
+        <link rel="stylesheet" href="./css/layout4.css"/>        
+        <link rel="stylesheet" href="./css/components.css"/>                
+        <link rel="stylesheet" href="./css/componentcolor.css"/>        
+        <link rel="stylesheet" ref="./css/flatcolor.css"/>   
+        <link rel="stylesheet" href="./css/greytheme.css">                     
+    </head>
+    <body>
+        <header id="header">
+            <nav class="w3-bar" id="topnav" style="z-index: 2;display:none">
+                <a href="#home" class="w3-bar-item active"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a href="#news" class="w3-bar-item">News</a>
+                <a href="#contact" class="w3-bar-item">Contact</a>
+                <a href="#about" class="w3-bar-item">About</a>                 
+                <!-- Not working
+                    <a href="#" class="w3-bar-item dropdown-hover" >
+                    <span>Dropdown <i class="fa fa-caret-down"></i></span>
+                    <div class="dropdown-content">
+                            <a href="#" >Link 1</a>
+                            <a href="#" >Link 2</a>
+                            <a href="#" >Link 3</a>
+                        </div>
+                </a> -->
+                <!-- <a class="w3-bar-item search-container">
+                    <form action="">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </a> -->
+                <a href="javascript:void(0);" class="icon w3-bar-item" onclick="headerTopBar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <div class="w3-top" id="topnavbar" style="z-index:2">
+                <div class="w3-bar w3-theme-d2 w3-left-align">
+                    <a class="fixedmenu icon w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-theme-d2" 
+                    href="javascript:void(0);" onclick="headerTopBar()"nclick="openNav()"><i class="fa fa-bars"></i></a>
+                    <a href="#" class="fixedmenu logo w3-bar-item w3-button w3-padding-large"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+                    <a href="#" class="w3-bar-item w3-button 3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i> Web</a>
+                    <a href="#" class="w3-bar-item w3-button 3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i> Profile</a>
+                    <a href="#" class="w3-bar-item w3-button 3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i> Message</a>
+                    <div class="alert w3-dropdown-hover 3-hide-small">
+                        <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+                        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                            <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+                            <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+                            <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+                        </div>
+                    </div> 
+                        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+                        <img src="./images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+                        </a>
+                    </div>
+                </div> 
+        </header>
+        <aside id="leftmenubar">
+            <nav id="leftsidenav">                
+                <a href="#about"><i class="fa fa-fw fa-home"></i> About</a>
+                <a href="#services"><i class="fa fa-fw fa-home"></i> Services</a>
+                <a href="#clients"><i class="fa fa-fw fa-home"></i> Clients</a>
+                <a href="#contact"><i class="fa fa-fw fa-home"></i> Contact</a>
+                <a class="w3-button w3-block w3-left-align" id="leftsidenav_accordion" onclick="leftsidenav_accordion_func()">
+                Accordion <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="leftsidenav_accordion_content" class="w3-hide w3-white w3-card">
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                </div>
+                <a class="w3-dropdown-click" id="leftsidenav_dropdown">
+                    <div onclick="leftsidenav_dropdown_func()">
+                    Dropdown <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                    </div>
+                </a>
+            
+            </nav>
+        </aside>
+        <aside id="leftsideslidebar" class="w3-sidebar w3-bar-block w3-card-4 w3-black w3-animate-left" style="display:none" >
+            <div id="leftsideovelay" >          
+                <div class="closebtn" href="#" onclick="leftsideslidebar_close()">&times;</div>
+                <section>
+                    <ul id="usertree">
+                        <li><span class="caret">Beverages</span>
+                            <ul class="nested">
+                            <li>Water</li>
+                            <li>Coffee</li>
+                            <li><span class="caret">Tea</span>
+                                <ul class="nested">
+                                <li>Black Tea</li>
+                                <li>White Tea</li>
+                                <li><span class="caret">Green Tea</span>
+                                    <ul class="nested">
+                                    <li>Sencha</li>
+                                    <li>Gyokuro</li>
+                                    <li>Matcha</li>
+                                    <li>Pi Lo Chun</li>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </li>  
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+            </div>
+        </aside>             
+        <aside id="rightsideslidebar" class="w3-sidebar w3-bar-block w3-card-4 w3-black 3-animate-right" >
+            <div id="rightsideovelay" >          
+                <div class="closebtn" href="#" onclick="rightsideslidebar_close()">&times;</div>
+                <a href="#" class="">Right Panel Content</a>                    
+            </div>
+        </aside>       
+        <main id="main">
+            <section>
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pictures</a></li>
+                    <li><a href="#">Summer 15</a></li>
+                    <li>Italy</li>
+                </ul>
+            </section>
+            <div id="leftSidenavIcon" class="leftSidenavIcon"><a class="w3-button w3-circle w3-red w3-small" id="leftsideslidebar_closebtn" href="#" onclick="leftsideslidebar_open()">&#9776;</a></div>
+            <div id="rightSidenavIcon" class="rightSidenavIcon"><a class="w3-button w3-circle w3-red w3-small" id="rightsideslidebar_closebtn" onclick="rightsideslidebar_open()">&#9776;</a></div>
+            <section id="content">
+                <div class="w3-panel w3-card-2" id="profile">
+                    <div class="w3-container">
+                        <img class="w3-round w3-margin-right" src="./images/avatar3.png" style="width:15%;">
+                        <span class="w3-opacity w3-large">Borge Refsnes</span> 
+                    </div>
+                </div>
+            </section>               
+            <div id="mainfooter">
+                <nav class="w3-bar" id="mainfooternavbar">
+                    <a href="#home" class="active w3-bar-item">Home</a>
+                    <a href="#news" class="w3-bar-item">News</a>
+                    <a href="#contact" class="w3-bar-item">Contact</a>
+                    <a href="#about" class="w3-bar-item">About</a>
+                    <a href="javascript:void(0);" class="icon w3-bar-item" onclick="footerbotBar()"><i class="fa fa-bars"></i></a>
+                </nav>
+            </div>
+        </main>
+        <footer id="footer">
+             
+        </footer>
+    </body>
+    <script src="./js/components.js"></script>
+    <script></script>
+</html>    
