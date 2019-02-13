@@ -68,59 +68,118 @@
                     </div>
                 </a>
             </nav>
-        </aside>      
+        </aside>     
         <main id="main">
             <section id="content">
-                <div class="w3-panel" id="myBtnContainer">
-                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-                    <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-                    <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-                    <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-                </div>
-                <div class="container">
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small cars">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
+                <div class="w3-container">
+                    <div class="w3-panel w3-blue-grey">
+                        <h6>Manage Vehicle Group</h6>
+                    </div>
+                    <div class="w3-bar w3-theme-d4">
+                        <button class="w3-bar-item w3-button tablink w3-theme" onclick="maintabnav(event,'maintabContainer','tablink','one')">Add</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="maintabnav(event,'maintabContainer','tablink','two')">Active List</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="maintabnav(event,'maintabContainer','tablink','three')">Deleted List <span class="w3-badge w3-right w3-small w3-white">3</span></button>
+                    </div>                    
+                    <div id="one" class="w3-container w3-border w3-white maintabContainer">                       
+                        <form class="w3-container " novalidate> 
+                            <div class="w3-row w3-padding-24"> 
+                                <div class="w3-col w3-padding-8">
+                                    <label class="w3-text-grey">Vehicle Group</label>
+                                    <input class="w3-input w3-border" type="text" required=""> 
+                                </div>       
+                            </div>                             
+                        </form>
+                    </div>                    
+                    <div id="two" class="w3-container w3-border maintabContainer" style="display:none">
+                        <div class="w3-responsive w3-padding-24">
+                            <table class="w3-table-all w3-card-4 w3-hoverable">
+                                <thead><tr class="w3-light-grey em-085">
+                                    <th>IMEI #</th>
+                                    <th>Activated On</th>
+                                    <th>Expires On</th>
+                                    <th>SIM #</th>
+                                    <th>Full Name</th>
+                                    <th>EMail Id</th>
+                                    <th>Mobile #</th> 
+                                    </tr>
+                                </thead>
+                                <tbody class="em-085">
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                    
+                    <div id="three" class="w3-container w3-border maintabContainer" style="display:none">
+                        <div class="w3-responsive w3-padding-24">
+                            <table class="w3-table-all w3-card-4 w3-hoverable">
+                                <thead><tr class="w3-light-grey em-085">
+                                    <th>IMEI #</th>
+                                    <th>Activated On</th>
+                                    <th>Expires On</th>
+                                    <th>SIM #</th>
+                                    <th>Full Name</th>
+                                    <th>EMail Id</th>
+                                    <th>Mobile #</th> 
+                                    </tr>
+                                </thead>
+                                <tbody class="em-085">
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr> 
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small colors fruits">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
-                        </div>
-                    </div>
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small cars">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
-                        </div>
-                    </div>
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small colors">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
-                        </div>
-                    </div>
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small cars animals">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
-                        </div>
-                    </div>
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small colors">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
-                        </div>
-                    </div> 
-                    <div class="w3-col l1 m3 s5 filterDiv w3-card w3-white w3-left w3-margin-small fruits animals">
-                        <img src="images/avatar3.png" alt="Avatar" style="width:100%;opacity:0.85">
-                        <div class="w3-container">
-                            <div class="w3-padding-16 w3-small">Senthil Kumar Palanisamy</div>                            
-                        </div>
-                    </div> 
                 </div>                  
             </section>          
             <div id="mainfooter">
