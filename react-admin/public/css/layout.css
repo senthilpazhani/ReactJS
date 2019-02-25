@@ -215,6 +215,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-xxxlarge{font-size:48px!important}
 .w3-jumbo{font-size:64px!important}
 
+.w3-lesswidth{width:0px !important;}
+.w3-maxwidth{width:350px !important;}
+
 .w3-left-align{text-align:left!important}
 .w3-right-align{text-align:right!important}
 .w3-justify{text-align:justify!important}
@@ -233,6 +236,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .w3-margin-small{margin:8px!important}
 .w3-margin{margin:16px!important}
+.w3-margin-small-top{margin-top:8px!important}
+.w3-margin-small-bottom{margin-bottom:8px!important}
 .w3-margin-top{margin-top:16px!important}
 .w3-margin-bottom{margin-bottom:16px!important}
 .w3-margin-left{margin-left:16px!important}

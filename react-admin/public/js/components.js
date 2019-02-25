@@ -272,5 +272,5 @@ function autocomplete(inp, arr) {
 }
 
 $().ready(function(){
-  $(".tablinkModal").on("click",function(){alert("hi")});
+  // $(".tablinkModal").on("click",function(){alert("hi")});
 });
