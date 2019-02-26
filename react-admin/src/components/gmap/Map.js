@@ -1,4 +1,4 @@
-import React, { Component , Fragment } from 'react';
+import React, { Component  } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker,} from "react-google-maps";
 // import Marker from './Marker';
 // import Polyline from './Polyline';

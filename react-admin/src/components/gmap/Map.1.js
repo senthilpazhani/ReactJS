@@ -129,7 +129,7 @@ class Map extends Component {
 
 
     _calculateAndDisplayRoute = (map,maps,places) => {  
-        const directionsService = new maps.DirectionsService();  
+        // const directionsService = new maps.DirectionsService();  
         // console.log("SERVICE", directionsService);
     }
     render () {          
