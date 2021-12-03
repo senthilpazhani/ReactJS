@@ -20,9 +20,28 @@ var fn = ()=>
   console.log(`x outside block scope is ${x}`)
   console.log(`y outside block scope is ${y}`)
   console.log(`z outside block scope is ${z}`)  
+ // return (`z return outside block scope is ${z}`)
+
 }
 //console.log(fn); // prints the function statements
 console.log(fn()); // If no return statement, it retuns "undefined"
 
 divider();
 fn(); // return statement is not required
+
+Output:
+x in block scope is 100
+y in block scope is 200
+z in block scope is 300
+x outside block scope is 1
+y outside block scope is 2
+z outside block scope is 3
+undefined
+--------------------------------------------------
+x in block scope is 100
+y in block scope is 200
+z in block scope is 300
+x outside block scope is 1
+y outside block scope is 2
+z outside block scope is 3
+undefined
